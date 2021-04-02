@@ -1,4 +1,14 @@
-import React from 'react';
+import React, { FC } from 'react';
 import './index.less';
 
-export default ({ title }: { title: string }) => <h1>{title}</h1>;
+export interface ILogin {
+  /**
+   * @description       标题
+   * @default           登录
+   */
+  title?: string;
+}
+
+const MLogin:  FC<ILogin> = ({ title }: ILogin) => <h1>{title}</h1>;
+
+export default MLogin;
