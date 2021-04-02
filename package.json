@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "tuliao-site",
+  "version": "1.0.0",
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "start": "dumi dev",
+    "docs:build": "dumi build",
+    "build":"lerna run build",
+    "clean":"lerna clean -y && lerna run clean",
+    "publish":"npm run build && lerna publish"
+  },
+  "dependencies": {
+    "react": "^16.12.0"
+  },
+  "devDependencies": {
+    "dumi": "^1.0.13",
+    "lerna": "^4.0.0",
+    "prettier": "^1.19.1",
+    "yorkie": "^2.0.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
